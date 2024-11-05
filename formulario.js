@@ -54,7 +54,7 @@ var elementoLista = document.createElement("div")
 elementoLista.classList.add("elemento-lista")
 lista.appendChild(elementoLista)
 
-//Removed duplicate code
+//Removed duplicate code (Name injection)
 
 function crearElemento(descripcion, valor) {
 var spanNombre = document.createElement("span")
