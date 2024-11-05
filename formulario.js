@@ -1,8 +1,9 @@
-var formulario = document.querySelector("#form")
+//Selecciona la clase formulario en el HTML
+var formulario = document.querySelector(".formulario")
 
-formulario.onsubmit = function(e) {
+formulario.onsubmit = function(el) {
 
-  e.prevent();
+  el.preventDefault()
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -30,12 +31,7 @@ if (nombre.length > 0
   }
 }
 
-var botonBorrar = document.createElement("button")
-botonBorrar.textContent = "Eliminar invitado"
-botonBorrar.id = "boton-borrar"
-var corteLinea = document.createElement("br")
-document.body.appendChild(corteLinea)
-document.body.appendChild(botonBorrar);
+//Removed duplicate code outside function
 
 function agregarInvitado(nombre, edad, nacionalidad) {
 
@@ -55,17 +51,10 @@ function agregarInvitado(nombre, edad, nacionalidad) {
 var lista = document.getElementById("lista-de-invitados")
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista")
 lista.appendChild(elementoLista)
 
-var spanNombre = document.createElement("span")
-var inputNombre = document.createElement("input")
-var espacio = document.createElement("br")
-spanNombre.textContent = "Nombre: "
-inputNombre.value = nombre 
-elementoLista.appendChild(spanNombre)
-elementoLista.appendChild(inputNombre)
-elementoLista.appendChild(espacio)
+//Removed duplicate code
 
 function crearElemento(descripcion, valor) {
 var spanNombre = document.createElement("span")
